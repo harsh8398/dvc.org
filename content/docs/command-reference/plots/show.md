@@ -12,8 +12,7 @@ usage: dvc plots show [-h] [-q | -v] [-t <name_or_path>] [-x <field>]
                       [targets [targets ...]]
 
 positional arguments:
-  targets               Metric files to visualize.
-                        Shows all plots by default.
+  targets              Plot files to visualize (shows all plots defined in dvc.yaml by default).
 ```
 
 ## Description
@@ -22,8 +21,8 @@ This command provides a quick way to visualize metrics such as loss functions,
 AUC curves, confusion matrices, etc. All plots defined in `dvc.yaml` are used by
 default.
 
-Optionally, specific metric file `targets` to show are accepted. These must be
-listed in a `dvc.yaml` file (see the `--plots` option of `dvc run`).
+Optionally, specific metric file `targets` to show are accepted. If `targets`
+are present, they do not have to be defined in `dvc.yaml` as plots.
 
 The plot style can be customized with
 [plot templates](/doc/command-reference/plots#plot-templates), using the
